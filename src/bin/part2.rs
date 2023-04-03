@@ -1,7 +1,7 @@
 use std::fs::File;
 use std::io::{BufReader, BufRead};
 
-fn main() {
+fn main1() {
     let file = File::open("assets/day1/input2.txt").expect("Could not open file");
     let reader = BufReader::new(file);
 
@@ -30,4 +30,12 @@ fn main() {
     }
 
     println!("{}", biggest);
+}
+
+fn main() {
+   let input = include_str!("assets/day1/input2.txt");
+
+   let t = input.split("\n\n").map(|x| x);
+
+   println!("{:?}", t)
 }
